@@ -1,0 +1,134 @@
+[
+  {
+    "id": "1",
+    "thumbnail": "https://i.ibb.co/s98FT6Jt/download.jpg",
+    "name": "Tech Future Summit 2025",
+    "category": "Tech",
+    "date": "2025-06-15",
+    "location": "Dhaka Convention Center",
+    "entry_fee": "Free",
+    "description": "Explore the future of AI, Web3, and Cloud Computing.",
+    "organizer": "TechHub BD"
+  },
+  {
+    "id": "2",
+    "thumbnail": "https://i.ibb.co/5ht3Hf03/download.jpg",
+    "name": "Colors of Dhaka - Art Exhibition",
+    "category": "Art",
+    "date": "2025-06-20",
+    "location": "Dhaka Art Gallery",
+    "entry_fee": "৳100",
+    "description": "A vivid display of urban life through art.",
+    "organizer": "Urban Artists Circle"
+  },
+  {
+    "id": "3",
+    "thumbnail": "https://i.ibb.co/Rk04Ps71/gradient-ui-ux-background-23-2149052117.jpg",
+    "name": "UI/UX Design Workshop",
+    "category": "Workshop",
+    "date": "2025-06-18",
+    "location": "BASIS Institute",
+    "entry_fee": "৳300",
+    "description": "Hands-on session on modern UI/UX design principles.",
+    "organizer": "Creative Minds BD"
+  },
+  {
+    "id": "4",
+    "thumbnail": "https://i.ibb.co/ymQhr88J/download.jpg",
+    "name": "Rock & Roll Night",
+    "category": "Music",
+    "date": "2025-06-25",
+    "location": "Army Stadium",
+    "entry_fee": "৳500",
+    "description": "Live concert by popular rock bands of Bangladesh.",
+    "organizer": "BD Music Club"
+  },
+  {
+    "id": "5",
+    "thumbnail": "https://i.ibb.co/FbHPJvLY/images.jpg",
+    "name": "Inter University Football Championship",
+    "category": "Sports",
+    "date": "2025-07-01",
+    "location": "BUET Ground",
+    "entry_fee": "Free",
+    "description": "Top 10 universities competing for the trophy.",
+    "organizer": "DU Sports Committee"
+  },
+  {
+    "id": "6",
+    "thumbnail": "https://i.ibb.co/CLq3y7y/download.jpg",
+    "name": "Old Dhaka Photowalk",
+    "category": "Photography",
+    "date": "2025-06-30",
+    "location": "Shankhari Bazar",
+    "entry_fee": "৳200",
+    "description": "Capture the soul of Old Dhaka with guided photo stops.",
+    "organizer": "PhotoZone BD"
+  },
+  {
+    "id": "7",
+    "thumbnail": "https://i.ibb.co/7xq0gXh5/download.jpg",
+    "name": "Summer Book Fair",
+    "category": "Literature",
+    "date": "2025-07-05",
+    "location": "Bangla Academy",
+    "entry_fee": "Free",
+    "description": "A gathering for readers, writers, and publishers.",
+    "organizer": "LitFest BD"
+  },
+  {
+    "id": "8",
+    "thumbnail": "https://i.ibb.co/SDRWDVHS/download.jpg",
+    "name": "Local Chef Challenge",
+    "category": "Food",
+    "date": "2025-07-08",
+    "location": "Gulshan Club",
+    "entry_fee": "৳250",
+    "description": "Cooking competition among amateur chefs.",
+    "organizer": "Tasty Tales"
+  },
+  {
+    "id": "9",
+    "thumbnail": "https://i.ibb.co/KjcDRdrt/download.jpg",
+    "name": "Robotics Expo for Kids",
+    "category": "Education",
+    "date": "2025-07-10",
+    "location": "AIUB Campus",
+    "entry_fee": "৳150",
+    "description": "Interactive showcase for young minds interested in robotics.",
+    "organizer": "STEM4Kids"
+  },
+  {
+    "id": "10",
+    "thumbnail": "https://i.ibb.co/F45Gh4mH/6490fbbda310bf8a1d22a6df.png",
+    "name": "Green Dhaka - Environmental Fair",
+    "category": "Social",
+    "date": "2025-07-15",
+    "location": "Osmani Udyan",
+    "entry_fee": "Free",
+    "description": "Awareness event on sustainability & green initiatives.",
+    "organizer": "EcoGuardians"
+  },
+  {
+    "id": "11",
+    "thumbnail": "https://i.ibb.co/rKFtk0gr/download.jpg",
+    "name": "Tech Career Meetup",
+    "category": "Career",
+    "date": "2025-07-20",
+    "location": "Khan Academy Hall",
+    "entry_fee": "৳100",
+    "description": "Talks and networking with tech industry leaders.",
+    "organizer": "CareerHub"
+  },
+  {
+    "id": "12",
+    "thumbnail": "https://i.ibb.co/4Zhxq6Y2/download.png",
+    "name": "24hr National Hackathon",
+    "category": "Tech",
+    "date": "2025-07-25",
+    "location": "ICT Division",
+    "entry_fee": "Free (Apply First)",
+    "description": "Solve real-world problems with code in 24 hours.",
+    "organizer": "ICT Division, BD"
+  }
+]
