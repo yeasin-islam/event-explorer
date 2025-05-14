@@ -19,7 +19,7 @@ const Navbar = () => {
             } to="/">Home</NavLink></li>
             <li><NavLink className={({ isActive }) =>
               isActive ? "text-indigo-500" : ""
-            } to="/bookedevents">Booked Events</NavLink></li>
+            } to="/booked-events">Booked Events</NavLink></li>
             <li><NavLink className={({ isActive }) =>
               isActive ? "text-indigo-500" : ""
             } to="/about">About</NavLink></li>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                  className="mt-12 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
                 >
                   <li className="font-semibold">{user.displayName || "No Name"}</li>
                   <li className="text-xs opacity-70">{user.email || "No Email"}</li>
@@ -50,7 +50,7 @@ const Navbar = () => {
                   } to="/">Home</NavLink></li>
                   <li className=" md:hidden"><NavLink className={({ isActive }) =>
                     isActive ? "text-indigo-500" : ""
-                  } to="/bookedevents">Booked Events</NavLink></li>
+                  } to="/booked-events">Booked Events</NavLink></li>
                   <li className=" md:hidden"><NavLink className={({ isActive }) =>
                     isActive ? "text-indigo-500" : ""
                   } to="/about">About</NavLink></li>
@@ -77,22 +77,44 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "bg-indigo-500 btn" : "btn"
-                }
-                to="/login"
-              >
-                Login
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "bg-indigo-500 btn" : "btn"
-                }
-                to="/register"
-              >
-                Register
-              </NavLink>
+              {/* Login/Register for all screens */}
+              <NavLink className={({ isActive }) => isActive ? "bg-indigo-500 btn" : "btn"} to="/login">Login</NavLink>
+              <NavLink className={({ isActive }) => isActive ? "bg-indigo-500 btn" : "btn"} to="/register">Register</NavLink>
+
+              {/* Dropdown only on mobile (visible if logged out) */}
+              <div className="dropdown dropdown-end flex justify-between gap-2">
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
+                  </svg>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="mt-12 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                >
+
+                  <li className=" md:hidden"><NavLink className={({ isActive }) =>
+                    isActive ? "text-indigo-500" : ""
+                  } to="/">Home</NavLink></li>
+                  <li className=" md:hidden"><NavLink className={({ isActive }) =>
+                    isActive ? "text-indigo-500" : ""
+                  } to="/booked-events">Booked Events</NavLink></li>
+                  <li className=" md:hidden"><NavLink className={({ isActive }) =>
+                    isActive ? "text-indigo-500" : ""
+                  } to="/about">About</NavLink></li>
+                  {/* <li className=" md:hidden">
+                    <NavLink to="/profile" className="justify-between">
+                      Profile
+                      <span className="badge">New</span>
+                    </NavLink>
+                  </li> */}
+                  <li className=" md:hidden"><NavLink className={({ isActive }) =>
+                    isActive ? "text-indigo-500" : ""
+                  } to="/profile">Profile</NavLink></li>
+                </ul>
+
+              </div>
+
             </>
           )}
         </div>

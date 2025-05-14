@@ -8,21 +8,21 @@ export const getBookedEvents = () => {
   }
   return bookedevents
 }
-export const addBookedEvent = phone => {
+export const addBookedEvent = event => {
   let bookedevents = getBookedEvents()
-  const isExist = bookedevents.find(b => b.id === phone.id)
+  const isExist = bookedevents.find(b => b.id === event.id)
   if (isExist) return toast.error('Already Added!')
 
-  bookedevents.push(phone)
+  bookedevents.push(event)
   localStorage.setItem('bookedevents', JSON.stringify(bookedevents))
-  toast.success('Phone added Successfully!')
+  toast.success('Event added Successfully!')
 }
 
 export const removeBookedEvent = id => {
   let bookedevents = getBookedEvents()
   const remaining = bookedevents.filter(b => b.id !== id)
   localStorage.setItem('bookedevents', JSON.stringify(remaining))
-  toast.success('Phone Removed from BookedEvent List!')
+  toast.success('Event Removed from BookedEvent List!')
 }
 
 export const getCart = () => {
@@ -33,12 +33,12 @@ export const getCart = () => {
   }
   return cart
 }
-export const addToCart = phone => {
+export const addToCart = event => {
   let cart = getCart()
-  const isExist = cart.find(b => b.id === phone.id)
+  const isExist = cart.find(b => b.id === event.id)
   if (isExist) return toast.error('Already Added!')
 
-  cart.push(phone)
+  cart.push(event)
   localStorage.setItem('cart', JSON.stringify(cart))
   toast.success('Cart Updated!')
 }

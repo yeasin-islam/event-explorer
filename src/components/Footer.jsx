@@ -18,7 +18,7 @@ const Footer = () => {
             } to="/">Home</NavLink></li>
             <li><NavLink className={({ isActive }) =>
               isActive ? "text-indigo-500" : ""
-            } to="/bookedevents">Booked Events</NavLink></li>
+            } to="/booked-events">Booked Events</NavLink></li>
             <li><NavLink className={({ isActive }) =>
               isActive ? "text-indigo-500" : ""
             } to="/about">About</NavLink></li>

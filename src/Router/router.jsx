@@ -1,7 +1,4 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router";
+import { createBrowserRouter } from "react-router";
 import Home from "../pages/Home";
 import MainLayout from "../Layout/MainLayout";
 import Login from "../pages/Login";
@@ -26,14 +23,15 @@ const router = createBrowserRouter([
         path: '/',
         Component: Home,
         loader: () => fetch('../events.json'),
-        hydrateFallbackElement: <LoadingFallback/>,
+        hydrateFallbackElement: <LoadingFallback />,
       },
       {
         path: '/event-details/:id',
-        Component: EventDetails,
+        element: <PrivateRoute> <EventDetails /> </PrivateRoute>,
         loader: () => fetch('../events.json'),
-        hydrateFallbackElement: <p>Loading, Please Wait....</p>,
+        hydrateFallbackElement: <LoadingFallback />,
       },
+
       {
         path: '/login',
         element: <Login />
@@ -51,8 +49,8 @@ const router = createBrowserRouter([
         element: <About />
       },
       {
-        path: '/bookedevents',
-        Component: BookedEvents,
+        path: '/booked-events',
+        element: <PrivateRoute> <BookedEvents /> </PrivateRoute>,
       },
 
     ]

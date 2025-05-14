@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import EventCard from '../components/EventCard'
 import EmptyState from '../components/shared/EmptyState'
 import { getBookedEvents, removeBookedEvent } from '../utils'
+import { Helmet } from 'react-helmet-async'
 const BookedEvents = () => {
   const [displayEvents, setDisplayEvents] = useState([])
   useEffect(() => {
