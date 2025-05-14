@@ -4,8 +4,8 @@ Welcome to **EventeXplorer** – a fun and modern web app that helps people disc
 
 ## 🌐 Live Site
 
-👉 [Visit EventeXplorer-Netlify](https://event-explorer-catagori-jesmine-a9.netlify.app/)
-👉 [Visit EventeXplorer-Surge](http://event-explorer-catagori-jesmine-a9.surge.sh/)
+👉 [Visit EventeXplorer-Netlify](https://event-explorer-catagori-jesmine-a9.netlify.app)
+👉 [Visit EventeXplorer-Surge](http://event-explorer-catagori-jesmine-a9.surge.sh)
 
 ## 🎯 Purpose
 
