@@ -1,10 +1,13 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router";
+import { Helmet } from "react-helmet-async";
 
 const ResetPassword = () => {
   const [email, setEmail] = useState("");
-  const { resetPassword } = useContext(AuthContext); // You must add this function to your AuthContext
+  const { resetPassword } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,16 +17,26 @@ const ResetPassword = () => {
     }
 
     try {
-      await resetPassword(email); // This should call Firebase or your backend
+      await resetPassword(email);
       toast.success("Reset link sent! Check your inbox.");
-      setEmail("");
+
+      // Optional: open Gmail in a new tab
+      window.open("https://mail.google.com", "_blank");
+
+      // Redirect to login page
+      navigate("/login");
     } catch (error) {
       toast.error(error.message);
     }
   };
 
   return (
-    <div className="bg-base-200 p-10 rounded-xl shadow-2xl max-w-md mx-auto my-10">
+    <div className="fontStyle bg-base-200 p-10 rounded-xl shadow-2xl max-w-md mx-auto my-10">
+      <Helmet>
+        <title>
+          Reset Password | Event Explorer
+        </title>
+      </Helmet>
       <h2 className="text-2xl font-bold text-center mb-4">Reset Password</h2>
       <form onSubmit={handleSubmit}>
         <label className="label">Email Address</label>

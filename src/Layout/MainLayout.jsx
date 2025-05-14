@@ -4,7 +4,7 @@ import NavBar from "../components/Navbar";
 
 const MainLayout = () => {
     return (
-        <div className="">
+        <div className="fontStyle">
             <NavBar/>
              <Outlet/>
             <Footer/>

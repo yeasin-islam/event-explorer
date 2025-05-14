@@ -27,7 +27,7 @@ const Home = () => {
                     Home | EventExplorer
                 </title>
             </Helmet>
-            <div className=''>
+            <div className='fontStyle'>
                 <Hero handleSearch={handleSearch} />
                 <EventsContainer events={events} />
                 <CounteUp></CounteUp>

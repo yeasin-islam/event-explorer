@@ -5,7 +5,7 @@ import { MdDeleteForever } from 'react-icons/md'
 const EventCard = ({ event, deletable, handleRemove }) => {
   const { id, thumbnail, name, description } = event || {}
   return (
-    <div className='card bg-base-300  shadow-sm pt-5 text-center items-center'>
+    <div className='fontStyle card bg-base-300  shadow-sm pt-5 text-center items-center'>
       <div className="overflow-hidden rounded-xl w-72 h-48 group">
         <img
           src={thumbnail}

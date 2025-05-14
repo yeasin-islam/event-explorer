@@ -36,7 +36,7 @@ const Profile = () => {
   const githubEmail = githubProvider?.email;
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-base-200 rounded-xl shadow-lg text-center my-5">
+    <div className="fontStyle max-w-md mx-auto p-6 bg-base-200 rounded-xl shadow-lg text-center my-5">
 
       <Helmet>
         <title>Profile | EventExplorer</title>

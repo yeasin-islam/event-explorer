@@ -3,6 +3,7 @@ import { FaGoogle, FaGithub, FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
@@ -48,7 +49,12 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-base-200 p-10 rounded-xl shadow-2xl flex items-center justify-center min-h-screen">
+    <div className=" fontStyle bg-base-200 p-10 rounded-xl shadow-2xl flex items-center justify-center min-h-screen">
+      <Helmet>
+        <title>
+          Login | Event Explorer
+        </title>
+      </Helmet>
       <div className="w-full max-w-sm">
         <div className="text-center mb-5">
           <h1 className="text-2xl font-bold">Login</h1>

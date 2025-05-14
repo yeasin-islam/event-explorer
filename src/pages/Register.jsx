@@ -3,6 +3,7 @@ import { FaGoogle, FaGithub, FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { signUp, signInWithGoogle, signInWithGithub, updateUserProfile } = useContext(AuthContext);
@@ -51,7 +52,12 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-base-200 p-10 rounded-xl flex items-center justify-center min-h-screen">
+    <div className=" fontStyle bg-base-200 p-10 rounded-xl flex items-center justify-center min-h-screen">
+      <Helmet>
+        <title>
+          Regerter | Event Explorer
+        </title>
+      </Helmet>
       <div className="w-full max-w-sm">
         <div className="card bg-base-100 shadow-2xl">
           <h1 className="text-2xl font-bold text-center mt-5">Register</h1>
@@ -103,12 +109,6 @@ const Register = () => {
                 className="input input-bordered"
                 placeholder="Image URL"
               />
-
-              <div className="text-right mt-1">
-                <Link to="/reset-password" className="text-sm text-blue-500 hover:underline">
-                  Forgot Password?
-                </Link>
-              </div>
 
               <button type="submit" className="btn btn-neutral mt-4 w-full">Register</button>
             </form>

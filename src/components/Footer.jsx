@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="bg-orange-300">
+    <div className="fontStyle bg-orange-300">
       <footer className="md:flex space-y-8 md:space-y-0 justify-between py-10 container mx-auto">
         {/* EventExplorer Info Section */}
         <nav className="flex flex-col items-center md:items-start md:w-1/4  md:-mt-3">

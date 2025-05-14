@@ -57,7 +57,7 @@ const EventDetails = () => {
   if (!singleEvent) return <p className="text-red-500">Event not found</p>
 
   return (
-    <div className="w-full container mx-auto px-4 sm:px-6 lg:px-8 my-5">
+    <div className="fontStyle w-full container mx-auto px-4 sm:px-6 lg:px-8 my-5">
       
       <Helmet>
         <title>Event Details | EventExplorer</title>

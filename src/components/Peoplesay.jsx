@@ -11,7 +11,7 @@ const PeopleSaySection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-base-200" id="people-say">
+    <section className="fontStyle py-16 bg-base-200" id="people-say">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-4">What People Say</h2>
         <p className="text-gray-500 mb-10">Real words from real users who love EventExplorer.</p>

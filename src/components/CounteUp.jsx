@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 
 const CounteUp = () => {
   return (
-    <div className="text-center my-6 px-4 md:px-8 lg:px-16 bg-gray-300 py-14">
+    <div className="fontStyle text-center my-6 px-4 md:px-8 lg:px-16 bg-gray-300 py-14">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
         We Provide Best Events Services
       </h1>

@@ -15,7 +15,7 @@ const EventsContainer = ({ events }) => {
   }, [showAll, events])
 
   return (
-    <div className='py-12 px-4 sm:px-6 lg:px-8 text-center container mx-auto'>
+    <div className='fontStyle py-12 px-4 sm:px-6 lg:px-8 text-center container mx-auto'>
       {/* Section Tag & Description */}
       <div className="mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
