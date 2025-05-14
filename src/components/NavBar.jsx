@@ -6,49 +6,97 @@ const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
 
   return (
-    <div className="navbar ">
-      <div className="navbar-start">
-        <NavLink className="text-xl" to="/">EventExplorer</NavLink>
-      </div>
+    <div className="">
+      <div className=" container mx-auto navbar">
+        <div className="navbar-start">
+          <NavLink className="text-3xl italic font-bold text-green-700" to="/">EventExplorer</NavLink>
+        </div>
 
-      <div className="navbar-center hidden md:flex lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li><NavLink className={({ isActive }) =>
-            isActive ? "text-indigo-500" : ""
-          } to="/">Home</NavLink></li>
-          <li><NavLink className={({ isActive }) =>
-            isActive ? "text-indigo-500" : ""
-          } to="/about">About</NavLink></li>
-          <li><NavLink className={({ isActive }) =>
-            isActive ? "text-indigo-500" : ""
-          } to="/profile">Profile</NavLink></li>
-        </ul>
-      </div>
+        <div className="navbar-center hidden md:flex lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            <li><NavLink className={({ isActive }) =>
+              isActive ? "text-indigo-500" : ""
+            } to="/">Home</NavLink></li>
+            <li><NavLink className={({ isActive }) =>
+              isActive ? "text-indigo-500" : ""
+            } to="/bookedevents">Booked Events</NavLink></li>
+            <li><NavLink className={({ isActive }) =>
+              isActive ? "text-indigo-500" : ""
+            } to="/about">About</NavLink></li>
+            <li><NavLink className={({ isActive }) =>
+              isActive ? "text-indigo-500" : ""
+            } to="/profile">Profile</NavLink></li>
+          </ul>
+        </div>
 
-      <div className="navbar-end space-x-2">
-        {user ? (
-          <>
-            <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
-              <img
-                className="h-10 w-10 rounded-full"
-                src={user.photoURL}
-                alt="User"
-              />
-            </div>
-            <button onClick={logOut} className="btn btn-error text-white">
-              Logout
-            </button>
-          </>
-        ) : (
-          <>
-            <NavLink className={({ isActive }) =>
-                    isActive ? "bg-indigo-500 btn" : "btn"
-                  }  to="/login">Login</NavLink>
-            <NavLink className={({ isActive }) =>
-                    isActive ? "bg-indigo-500 btn" : "btn"
-                  }  to="/register">Register</NavLink>
-          </>
-        )}
+        <div className="navbar-end space-x-2">
+          {user ? (
+            <>
+              <div className="dropdown dropdown-end flex justify-between gap-2">
+                <label tabIndex={0} className="tooltip tooltip-bottom btn btn-ghost btn-circle avatar" data-tip={user.displayName}>
+                  <div className=" w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2" >
+                    <img src={user.photoURL || "https://i.ibb.co/2t2yKjW/default-avatar.png"} alt="User" />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                >
+                  <li className="font-semibold">{user.displayName || "No Name"}</li>
+                  <li className="text-xs opacity-70">{user.email || "No Email"}</li>
+
+                  <li className=" md:hidden"><NavLink className={({ isActive }) =>
+                    isActive ? "text-indigo-500" : ""
+                  } to="/">Home</NavLink></li>
+                  <li className=" md:hidden"><NavLink className={({ isActive }) =>
+                    isActive ? "text-indigo-500" : ""
+                  } to="/bookedevents">Booked Events</NavLink></li>
+                  <li className=" md:hidden"><NavLink className={({ isActive }) =>
+                    isActive ? "text-indigo-500" : ""
+                  } to="/about">About</NavLink></li>
+                  {/* <li className=" md:hidden">
+                    <NavLink to="/profile" className="justify-between">
+                      Profile
+                      <span className="badge">New</span>
+                    </NavLink>
+                  </li> */}
+                  <li className=" md:hidden"><NavLink className={({ isActive }) =>
+                    isActive ? "text-indigo-500" : ""
+                  } to="/profile">Profile</NavLink></li>
+                  <li className=" md:hidden">
+                    <button onClick={logOut} className="text-red-500">
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+
+              </div>
+              <button onClick={logOut} className="text-red-500 btn hidden md:flex">
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-indigo-500 btn" : "btn"
+                }
+                to="/login"
+              >
+                Login
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-indigo-500 btn" : "btn"
+                }
+                to="/register"
+              >
+                Register
+              </NavLink>
+            </>
+          )}
+        </div>
+
       </div>
     </div>
   );

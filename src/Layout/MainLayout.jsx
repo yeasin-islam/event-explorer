@@ -1,10 +1,10 @@
 import { Outlet } from "react-router";
 import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Navbar";
 
 const MainLayout = () => {
     return (
-        <div className="space-y-3">
+        <div className="">
             <NavBar/>
              <Outlet/>
             <Footer/>

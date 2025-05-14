@@ -9,18 +9,30 @@ import Register from "../pages/Register";
 import Profile from "../pages/Profile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import About from "../pages/About";
-import CardDetails from "../pages/CardDetails";
+import ErrorPage from "../pages/ErrorPage";
+import BookedEvents from "../pages/BookedEvents";
+import EventDetails from "../pages/EventDetails";
+import LoadingFallback from "../components/shared/LoadingFallback";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
         path: '/',
-        element: <Home></Home>
+        Component: Home,
+        loader: () => fetch('../events.json'),
+        hydrateFallbackElement: <LoadingFallback/>,
+      },
+      {
+        path: '/event-details/:id',
+        Component: EventDetails,
+        loader: () => fetch('../events.json'),
+        hydrateFallbackElement: <p>Loading, Please Wait....</p>,
       },
       {
         path: '/login',
@@ -39,8 +51,8 @@ const router = createBrowserRouter([
         element: <About />
       },
       {
-        path: '/crd-details',
-        element: <PrivateRoute><CardDetails /></PrivateRoute>
+        path: '/bookedevents',
+        Component: BookedEvents,
       },
 
     ]
