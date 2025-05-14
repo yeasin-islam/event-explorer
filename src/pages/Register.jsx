@@ -55,7 +55,7 @@ const Register = () => {
     <div className=" fontStyle bg-base-200 p-10 rounded-xl flex items-center justify-center min-h-screen">
       <Helmet>
         <title>
-          Regerter | Event Explorer
+          Regerter | EventeXplorer
         </title>
       </Helmet>
       <div className="w-full max-w-sm">

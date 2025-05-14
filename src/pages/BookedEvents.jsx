@@ -27,7 +27,7 @@ const BookedEvents = () => {
 
     <section className=" fontStyle py-12 px-5 md:px-0 container mx-auto">
       <Helmet>
-        <title>Booked Events | EventExplorer</title>
+        <title>Booked Events | EventeXplorer</title>
       </Helmet>
       {/* Heading and Description */}
       <div className="text-center mb-10 max-w-xl mx-auto">

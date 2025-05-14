@@ -60,7 +60,7 @@ const EventDetails = () => {
     <div className="fontStyle w-full container mx-auto px-4 sm:px-6 lg:px-8 my-5">
       
       <Helmet>
-        <title>Event Details | EventExplorer</title>
+        <title>Event Details | EventeXplorer</title>
       </Helmet>
       <div className="flex justify-center mb-8">
         <img src={thumbnail} className="w-full sm:w-3/4 md:w-1/2 mx-auto rounded-lg shadow-lg" alt={name} />

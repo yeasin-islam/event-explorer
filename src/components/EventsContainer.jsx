@@ -18,6 +18,7 @@ const EventsContainer = ({ events }) => {
     <div className='fontStyle py-12 px-4 sm:px-6 lg:px-8 text-center container mx-auto'>
       {/* Section Tag & Description */}
       <div className="mb-12">
+        <h3 className="text-xl md:text-2xl font-bold text-red-700 mb-4">Upcoming Events</h3>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
           Discover Events That Spark Your Interest
         </h2>

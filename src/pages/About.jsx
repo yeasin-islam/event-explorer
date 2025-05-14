@@ -31,7 +31,7 @@ const Blogs = () => {
         <>
             <Helmet>
                 <title>
-                    About | EventExplorer
+                    About | EventeXplorer
                 </title>
             </Helmet>
             <Suspense fallback={<LoadingFallback />}>

@@ -12,7 +12,7 @@ const ErrorPage = () => {
       <div className='fontStyle py-24 text-center'>
         <Helmet>
         <title>
-          Error Page | Event Explorer
+          Error Page | EventeXplorer
         </title>
       </Helmet>
         <h1 className='mb-8 text-7xl font-thin text-gray-900'>

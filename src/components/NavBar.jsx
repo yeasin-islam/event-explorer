@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className="fontStyle bg-gray-300">
       <div className="container mx-auto navbar">
         <div className="navbar-start">
-          <NavLink className="text-3xl italic font-bold text-green-700" to="/">EventExplorer</NavLink>
+          <NavLink className="text-3xl italic font-bold text-green-700" to="/">EventeXplorer</NavLink>
         </div>
 
         <div className="navbar-center hidden md:flex lg:flex">

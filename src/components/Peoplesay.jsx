@@ -14,7 +14,7 @@ const PeopleSaySection = () => {
     <section className="fontStyle py-16 bg-base-200" id="people-say">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-4">What People Say</h2>
-        <p className="text-gray-500 mb-10">Real words from real users who love EventExplorer.</p>
+        <p className="text-gray-500 mb-10">Real words from real users who love EventeXplorer.</p>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, index) => (

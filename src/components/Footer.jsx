@@ -9,7 +9,7 @@ const Footer = () => {
         {/* EventExplorer Info Section */}
         <nav className="flex flex-col items-center md:items-start md:w-1/4  md:-mt-3">
           <NavLink className="text-3xl italic font-bold text-green-700" to="/">
-            EventExplorer
+            EventeXplorer
           </NavLink>
           <p className="w-3/4 md:w-48 mt-4 md:mt-0 text-center md:text-left">
             Discover the best events around you, explore unique experiences, and stay updated with the latest happenings in your city.
@@ -101,7 +101,7 @@ const Footer = () => {
       </footer>
       <p className="text-center py-5">
         Copyright © {new Date().getFullYear()} – All rights reserved by
-        EventExplorer.bd.
+        EventeXplorer.bd
       </p>
     </div>
   );

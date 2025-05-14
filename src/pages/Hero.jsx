@@ -14,7 +14,7 @@ const Hero = ({ handleSearch }) => {
                         Find Events That Move You
                     </h1>
                     <p className=' text-gray-100'>
-                        From local meetups to major festivals, EventExplorer helps you discover, explore, and attend events that match your vibe. Dive into categories, save your favorites, and never miss out on what’s happening around you.
+                        From local meetups to major festivals, EventeXplorer helps you discover, explore, and attend events that match your vibe. Dive into categories, save your favorites, and never miss out on what’s happening around you.
 
 
                     </p>

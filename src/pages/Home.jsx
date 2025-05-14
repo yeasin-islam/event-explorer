@@ -24,7 +24,7 @@ const Home = () => {
         <>
             <Helmet>
                 <title>
-                    Home | EventExplorer
+                    Home | EventeXplorer
                 </title>
             </Helmet>
             <div className='fontStyle'>

@@ -39,7 +39,7 @@ const Profile = () => {
     <div className="fontStyle max-w-md mx-auto p-6 bg-base-200 rounded-xl shadow-lg text-center my-5">
 
       <Helmet>
-        <title>Profile | EventExplorer</title>
+        <title>Profile | EventeXplorer</title>
       </Helmet>
       <h1 className="text-2xl font-bold mb-4">Profile</h1>
 

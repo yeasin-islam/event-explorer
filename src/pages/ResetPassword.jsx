@@ -34,7 +34,7 @@ const ResetPassword = () => {
     <div className="fontStyle bg-base-200 p-10 rounded-xl shadow-2xl max-w-md mx-auto my-10">
       <Helmet>
         <title>
-          Reset Password | Event Explorer
+          Reset Password | EventeXplorer
         </title>
       </Helmet>
       <h2 className="text-2xl font-bold text-center mb-4">Reset Password</h2>
