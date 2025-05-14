@@ -10,6 +10,7 @@ import ErrorPage from "../pages/ErrorPage";
 import BookedEvents from "../pages/BookedEvents";
 import EventDetails from "../pages/EventDetails";
 import LoadingFallback from "../components/shared/LoadingFallback";
+import ResetPassword from "../pages/ResetPassword";
 
 
 const router = createBrowserRouter([
@@ -34,23 +35,27 @@ const router = createBrowserRouter([
 
       {
         path: '/login',
-        element: <Login />
+        element: <Login />,
       },
       {
         path: '/register',
-        element: <Register />
+        element: <Register />,
       },
       {
         path: '/profile',
-        element: <PrivateRoute> <Profile /> </PrivateRoute>
+        element: <PrivateRoute> <Profile /> </PrivateRoute>,
       },
       {
         path: '/about',
-        element: <PrivateRoute><About /></PrivateRoute>
+        element: <PrivateRoute><About /></PrivateRoute>,
       },
       {
         path: '/booked-events',
         element: <PrivateRoute> <BookedEvents /> </PrivateRoute>,
+      },
+      {
+        path: '/reset-password',
+        element: <ResetPassword/>,
       },
 
     ]

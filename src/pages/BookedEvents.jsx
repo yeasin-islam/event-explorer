@@ -24,11 +24,12 @@ const BookedEvents = () => {
 
   return (
     <>
-      <Helmet>
-        <title>BookedEvents | EventExplorer</title>
-      </Helmet>
 
       <section className="py-12 px-5 md:px-0 container mx-auto">
+
+        <Helmet>
+          <title>BookedEvents | EventExplorer</title>
+        </Helmet>
         {/* Heading and Description */}
         <div className="text-center mb-10 max-w-xl mx-auto">
           <h2 className="text-4xl font-semibold mb-3 text-orange-600">Your Booked Events</h2>

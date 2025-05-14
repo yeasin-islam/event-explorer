@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../context/AuthContext";
+import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
@@ -35,7 +36,7 @@ const Navbar = () => {
               <div className="dropdown dropdown-end flex justify-between gap-2">
                 <label tabIndex={0} className="tooltip tooltip-bottom btn btn-ghost btn-circle avatar" data-tip={user.displayName}>
                   <div className=" w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2" >
-                    <img src={user.photoURL || "https://i.ibb.co/2t2yKjW/default-avatar.png"} alt="User" />
+                    <img src={user.photoURL || <FaUserCircle className="text-4xl text-gray-600" />} alt="User" />
                   </div>
                 </label>
                 <ul

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { FaGoogle, FaGithub } from "react-icons/fa6";
+import { FaGoogle, FaGithub, FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
@@ -9,6 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [form, setForm] = useState({ email: "", password: "" });
+  const [showPassword, setShowPassword] = useState(false);
 
   const from = location.state?.from?.pathname || "/";
 
@@ -47,29 +48,67 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-base-200 p-10 rounded-xl shadow-2xl">
-      <div className="flex-col justify-center items-center">
-        <div className="text-center my-5">
+    <div className="bg-base-200 p-10 rounded-xl shadow-2xl flex items-center justify-center min-h-screen">
+      <div className="w-full max-w-sm">
+        <div className="text-center mb-5">
           <h1 className="text-2xl font-bold">Login</h1>
         </div>
-        <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-base-100 shadow-2xl">
           <div className="card-body">
             <form onSubmit={handleSubmit}>
-              <fieldset className="fieldset">
-                <label className="label">Email</label>
-                <input type="email" name="email" onChange={handleChange} className="input" placeholder="Email" required />
-                <label className="label">Password</label>
-                <input type="password" name="password" onChange={handleChange} className="input" placeholder="Password" required />
-                <button type="submit" className="btn btn-neutral mt-4">Login</button>
-              </fieldset>
+              <label className="label">Email</label>
+              <input
+                type="email"
+                name="email"
+                onChange={handleChange}
+                className="input input-bordered w-full"
+                placeholder="Email"
+                required
+              />
+
+              <label className="label mt-2">Password</label>
+              <div className="relative flex items-center">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  onChange={handleChange}
+                  className="input input-bordered w-full pr-10"
+                  placeholder="Password"
+                  required
+                />
+                <span
+                  className="absolute right-3 cursor-pointer text-lg text-gray-500"
+                  onClick={() => setShowPassword(prev => !prev)}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
+              </div>
+
+              <div className="text-right mt-1">
+                <Link to="/reset-password" className="text-sm text-blue-500 hover:underline">
+                  Forgot Password?
+                </Link>
+              </div>
+
+              <button type="submit" className="btn btn-neutral mt-4 w-full">
+                Login
+              </button>
             </form>
 
-            <span className="text-center">OR</span>
-            <button onClick={handleGoogleLogin} className="btn mt-2"><FaGoogle /> Sign in with Google</button>
-            <button onClick={handleGithubLogin} className="btn mt-2"><FaGithub /> Sign in with Github</button>
+            <div className="divider">OR</div>
+
+            <button onClick={handleGoogleLogin} className="btn w-full mb-2">
+              <FaGoogle /> <span>Sign in with Google</span>
+            </button>
+            <button onClick={handleGithubLogin} className="btn w-full">
+              <FaGithub /> <span>Sign in with GitHub</span>
+            </button>
 
             <div className="text-center mt-4">
-              Not registered? <Link className="underline" to="/register">Register</Link>
+              Not registered?{" "}
+              <Link className="underline text-blue-600" to="/register">
+                Register
+              </Link>
             </div>
           </div>
         </div>

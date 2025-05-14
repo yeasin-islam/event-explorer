@@ -3,6 +3,8 @@ import { AuthContext } from "../context/AuthContext";
 import { AuthCredential, reload } from "firebase/auth";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router";
+import { Helmet } from "react-helmet-async";
+import { FaUserCircle } from "react-icons/fa"; // You can use any icon you like
 
 const Profile = () => {
   const { user, updateUserProfile } = useContext(AuthContext);
@@ -16,16 +18,14 @@ const Profile = () => {
 
     try {
       await updateUserProfile(displayName, photoURL);
-      await reload(AuthCredential.currentUser); // get latest info
+      await reload(getAuth().currentUser); // Correct reload usage
       toast.success("Profile updated successfully!");
       setShow(false);
-      // Optional redirect after update:
-      // navigate("/dashboard"); 
     } catch (error) {
       console.error("Profile update failed:", error.message);
-      toast.error("Something went wrong. Please try again.");
     }
   };
+
 
   // GitHub info
   const githubProvider = user?.providerData?.find(
@@ -37,15 +37,27 @@ const Profile = () => {
 
   return (
     <div className="max-w-md mx-auto p-6 bg-base-200 rounded-xl shadow-lg text-center my-5">
+
+      <Helmet>
+        <title>Profile | EventExplorer</title>
+      </Helmet>
       <h1 className="text-2xl font-bold mb-4">Profile</h1>
 
       {user && (
         <div className="space-y-2">
-          <img
-            className="h-20 w-20 rounded-full mx-auto"
-            src={user.photoURL || "https://i.ibb.co/2t2yKjW/default-avatar.png"}
-            alt="Profile"
-          />
+          {/* Display profile image or fallback image */}
+          <div className="h-20 w-20 rounded-full mx-auto bg-gray-300 flex items-center justify-center">
+            {user.photoURL ? (
+              <img
+                className="h-20 w-20 rounded-full"
+                src={user.photoURL}
+                alt="Profile"
+              />
+            ) : (
+              <FaUserCircle className="text-6xl text-gray-600" />
+            )}
+          </div>
+
           <div className="text-lg font-semibold">{user.displayName || "No Name Set"}</div>
           <div className="text-sm opacity-70">
             {user.email || githubEmail || "Email not available"}

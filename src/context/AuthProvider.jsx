@@ -7,6 +7,7 @@ import {
   updateProfile,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "../firebase.config";
@@ -40,12 +41,35 @@ const AuthProvider = ({ children }) => {
     });
   };
 
-  const signUp = (email, password) => createUserWithEmailAndPassword(auth, email, password);
+  const signUp = (email, password, name) => {
+    // Register user with email/password
+    return createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        // After signing up, update the profile with name
+        return updateProfile(user, { displayName: name });
+      })
+      .then(() => {
+        setUser({ ...auth.currentUser });
+      });
+  };
+
   const signIn = (email, password) => signInWithEmailAndPassword(auth, email, password);
+  
+  // Password reset function
+  const resetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email)
+      .then(() => {
+        console.log('Password reset email sent!');
+      })
+      .catch((err) => {
+        console.error('Error sending password reset email:', err);
+      });
+  };
 
   const updateUserProfile = async (displayName, photoURL) => {
     await updateProfile(auth.currentUser, { displayName, photoURL });
-    setUser({ ...auth.currentUser }); // or let onAuthStateChanged refresh
+    setUser({ ...auth.currentUser }); // Let onAuthStateChanged refresh if needed
   };
 
   const logOut = () => {
@@ -64,11 +88,13 @@ const AuthProvider = ({ children }) => {
 
   const userInfo = {
     user,
+    setUser,
     isLoading,
     signUp,
     signIn,
     signInWithGoogle,
     signInWithGithub,
+    resetPassword, // <-- Added here
     updateUserProfile,
     logOut,
   };
