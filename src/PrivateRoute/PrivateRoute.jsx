@@ -1,12 +1,13 @@
 import { use } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Navigate } from "react-router";
+import LoadingFallback from "../components/shared/LoadingFallback";
 
 const PrivateRoute = ({children}) => {
     const { user, isLoading } = use(AuthContext)
 
     if(isLoading) {
-        return <div>Loading....</div>
+        return <LoadingFallback></LoadingFallback>
     }
 
     if(!user) {

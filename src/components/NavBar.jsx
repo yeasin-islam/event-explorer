@@ -6,8 +6,8 @@ const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
 
   return (
-    <div className="">
-      <div className=" container mx-auto navbar">
+    <div className=" bg-gray-300">
+      <div className="container mx-auto navbar">
         <div className="navbar-start">
           <NavLink className="text-3xl italic font-bold text-green-700" to="/">EventExplorer</NavLink>
         </div>
@@ -114,10 +114,10 @@ const Navbar = () => {
                     isActive ? "text-indigo-500" : ""
                   } to="/profile">Profile</NavLink></li>
                   <li className=" md:hidden"><NavLink className={({ isActive }) =>
-                    isActive ? "text-indigo-500" : ""
+                    isActive ? "bg-indigo-500 btn" : "btn"
                   } to="/login">Login</NavLink></li>
-                  <li className=" md:hidden"><NavLink className={({ isActive }) =>
-                    isActive ? "text-indigo-500" : ""
+                  <li className=" md:hidden mt-2"><NavLink className={({ isActive }) =>
+                    isActive ? "bg-indigo-500 btn" : "btn"
                   } to="/register">Register</NavLink></li>
                 </ul>
 

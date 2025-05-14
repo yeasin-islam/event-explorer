@@ -1,8 +1,32 @@
-import React from 'react'
-import Button from '../components/shared/Button'
-import { Helmet } from 'react-helmet-async'
+import React, { Suspense, useEffect, useState } from "react";
+import Button from "../components/shared/Button";
+import { CiCalendarDate } from "react-icons/ci";
+import LoadingFallback from "../components/shared/LoadingFallback";
+import { Helmet } from "react-helmet-async";
 
-const About = () => {
+const Blogs = () => {
+    const [faqs, setFaqs] = useState([]);
+    const [displayQuestions, setDisplayQuestions] = useState([]);
+    const [showAll, setShowAll] = useState(false);
+
+    useEffect(() => {
+        fetch("/faq.json")
+            .then((res) => res.json())
+            .then((data) => {
+                setFaqs(data);
+                setDisplayQuestions(data.slice(0, 3)); // initial 3 questions
+            })
+            .catch((error) => console.error("Failed to fetch FAQ data:", error));
+    }, []);
+
+    useEffect(() => {
+        if (showAll) {
+            setDisplayQuestions(faqs);
+        } else {
+            setDisplayQuestions(faqs.slice(0, 3));
+        }
+    }, [showAll, faqs]);
+
     return (
         <>
             <Helmet>
@@ -10,152 +34,43 @@ const About = () => {
                     About | EventExplorer
                 </title>
             </Helmet>
-            <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
-                <div className='grid gap-5 mb-8 md:grid-cols-2 lg:grid-cols-3'>
-                    <div className='p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2'>
-                        <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50'>
-                            <svg
-                                className='w-10 h-10 text-deep-purple-accent-400'
-                                stroke='currentColor'
-                                viewBox='0 0 52 52'
+            <Suspense fallback={<LoadingFallback />}>
+                <div className="fontStyle px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 py-5">
+                    <div className="space-y-4 mb-8">
+                        {displayQuestions.map((faq) => (
+                            <div
+                                key={faq.id}
+                                className="p-5 duration-300 transform bg-white border-none rounded shadow-sm hover:-translate-y-2"
                             >
-                                <polygon
-                                    strokeWidth='3'
-                                    strokeLinecap='round'
-                                    strokeLinejoin='round'
-                                    fill='none'
-                                    points='29 13 14 29 25 29 23 39 38 23 27 23'
-                                />
-                            </svg>
-                        </div>
-                        <h6 className='mb-2 font-semibold leading-5'>The doctor said</h6>
-                        <p className='text-sm text-gray-900'>
-                            Baseball ipsum dolor sit amet cellar rubber win hack tossed.
-                            Slugging catcher slide bench league, left fielder nubber.
-                        </p>
+                                <h6 className="mb-2 font-semibold text-lg leading-5">
+                                    Q-{faq.id}: {faq.question}
+                                </h6>
+                                <hr />
+                                <div className="my-7">
+                                    <p className="font-medium text-lime-400">Answer:</p>
+                                    <p className="text-md text-gray-900">{faq.answer}</p>
+                                </div>
+                                <hr />
+                                <h3 className="text-md text-gray-600 mt-2 flex gap-1 items-center">
+                                    <CiCalendarDate className="text-xl" />
+                                    Added at {faq.date}
+                                </h3>
+                            </div>
+                        ))}
                     </div>
-                    <div className='p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2'>
-                        <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50'>
-                            <svg
-                                className='w-10 h-10 text-deep-purple-accent-400'
-                                stroke='currentColor'
-                                viewBox='0 0 52 52'
-                            >
-                                <polygon
-                                    strokeWidth='3'
-                                    strokeLinecap='round'
-                                    strokeLinejoin='round'
-                                    fill='none'
-                                    points='29 13 14 29 25 29 23 39 38 23 27 23'
-                                />
-                            </svg>
-                        </div>
-                        <h6 className='mb-2 font-semibold leading-5'>That is the true</h6>
-                        <p className='text-sm text-gray-900'>
-                            We meet at one of those defining moments - a moment when our nation
-                            is at war, our economy is in turmoil, and the American promise has
-                            been threatened once more.
-                        </p>
-                    </div>
-                    <div className='p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2'>
-                        <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50'>
-                            <svg
-                                className='w-10 h-10 text-deep-purple-accent-400'
-                                stroke='currentColor'
-                                viewBox='0 0 52 52'
-                            >
-                                <polygon
-                                    strokeWidth='3'
-                                    strokeLinecap='round'
-                                    strokeLinejoin='round'
-                                    fill='none'
-                                    points='29 13 14 29 25 29 23 39 38 23 27 23'
-                                />
-                            </svg>
-                        </div>
-                        <h6 className='mb-2 font-semibold leading-5'>Those options</h6>
-                        <p className='text-sm text-gray-900'>
-                            Strategic high-level 30,000 ft view. Drill down re-inventing the
-                            wheel at the end of the day but curate imagineer, or to be inspired
-                            is to become creative.
-                        </p>
-                    </div>
-                    <div className='p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2'>
-                        <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50'>
-                            <svg
-                                className='w-10 h-10 text-deep-purple-accent-400'
-                                stroke='currentColor'
-                                viewBox='0 0 52 52'
-                            >
-                                <polygon
-                                    strokeWidth='3'
-                                    strokeLinecap='round'
-                                    strokeLinejoin='round'
-                                    fill='none'
-                                    points='29 13 14 29 25 29 23 39 38 23 27 23'
-                                />
-                            </svg>
-                        </div>
-                        <h6 className='mb-2 font-semibold leading-5'>Swearem ipsum</h6>
-                        <p className='text-sm text-gray-900'>
-                            Aliquam scelerisque accumsan nisl, a mattis eros vestibulum et.
-                            Vestibulum placerat purus ut nibh aliquam fringilla. Aenean et
-                            tortor diam, id tempor elit.
-                        </p>
-                    </div>
-                    <div className='p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2'>
-                        <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50'>
-                            <svg
-                                className='w-10 h-10 text-deep-purple-accent-400'
-                                stroke='currentColor'
-                                viewBox='0 0 52 52'
-                            >
-                                <polygon
-                                    strokeWidth='3'
-                                    strokeLinecap='round'
-                                    strokeLinejoin='round'
-                                    fill='none'
-                                    points='29 13 14 29 25 29 23 39 38 23 27 23'
-                                />
-                            </svg>
-                        </div>
-                        <h6 className='mb-2 font-semibold leading-5'>Webtwo ipsum</h6>
-                        <p className='text-sm text-gray-900'>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut
-                            perspiciatis unde omnis.
-                        </p>
-                    </div>
-                    <div className='p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2'>
-                        <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50'>
-                            <svg
-                                className='w-10 h-10 text-deep-purple-accent-400'
-                                stroke='currentColor'
-                                viewBox='0 0 52 52'
-                            >
-                                <polygon
-                                    strokeWidth='3'
-                                    strokeLinecap='round'
-                                    strokeLinejoin='round'
-                                    fill='none'
-                                    points='29 13 14 29 25 29 23 39 38 23 27 23'
-                                />
-                            </svg>
-                        </div>
-                        <h6 className='mb-2 font-semibold leading-5'>Lookout flogging</h6>
-                        <p className='text-sm text-gray-900'>
-                            Flatland! Hypatia. Galaxies Orion's sword globular star cluster?
-                            Light years quasar as a patch of light gathered by gravity Vangelis
-                            radio telescope.
-                        </p>
+                    <div className="text-center">
+                        <Button
+                            onClick={() => {
+                                setShowAll((prev) => !prev);
+                                if (showAll) window.scrollTo(0, 0);
+                            }}
+                            label={showAll ? "Hide" : "Learn More"}
+                        />
                     </div>
                 </div>
-                <div className='text-center'>
-                    <Button label='Learn More' />
-                </div>
-            </div>
+            </Suspense>
         </>
-    )
-}
+    );
+};
 
-export default About
+export default Blogs;

@@ -11,7 +11,7 @@ const Footer = () => {
           <NavLink className="text-3xl italic font-bold text-green-700" to="/">
             EventExplorer
           </NavLink>
-          <p className="w-full md:w-48 mt-4 md:mt-0 text-center md:text-left">
+          <p className="w-3/4 md:w-48 mt-4 md:mt-0 text-center md:text-left">
             Discover the best events around you, explore unique experiences, and stay updated with the latest happenings in your city.
           </p>
         </nav>
@@ -101,7 +101,7 @@ const Footer = () => {
       </footer>
       <p className="text-center py-5">
         Copyright © {new Date().getFullYear()} – All rights reserved by
-        Phudu Ltd.
+        EventExplorer.bd.
       </p>
     </div>
   );

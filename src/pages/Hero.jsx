@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-// import Button from '../shared/Button'
-import bannerImg from '/public/image.png'
 import Button from '../components/shared/Button'
 import Slider from '../components/slider/Slider'
+
+
+
 const Hero = ({ handleSearch }) => {
     const [searchText, setSearchText] = useState('')
     return (

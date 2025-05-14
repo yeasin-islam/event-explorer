@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "question": "What is EventExplorer and what does it offer?",
+    "answer": "EventExplorer is a modern web app that helps users discover, explore, and book exciting events. It features an intuitive interface, real-time feedback with toasts, and seamless booking—all built with React, Tailwind CSS, Firebase, and more.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 2,
+    "question": "How can I book an event on EventExplorer?",
+    "answer": "Go to the event details page, fill in your name and email, then click the 'Book Event' button. Your event will be saved and viewable in the Booked Events section.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 3,
+    "question": "Where can I find the events I’ve booked?",
+    "answer": "You can find all your booked events under the 'Booked Events' page, accessible from the navbar or footer.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 4,
+    "question": "Can I remove a booked event?",
+    "answer": "Yes. On the Booked Events page, each event card has a delete button. Clicking it will remove the event from your list.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 5,
+    "question": "Is my event booking stored permanently?",
+    "answer": "Currently, bookings are stored in your browser's local storage. Clearing browser data will remove your booked events.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 6,
+    "question": "Is EventExplorer mobile-friendly?",
+    "answer": "Absolutely. EventExplorer is fully responsive and works seamlessly on mobile, tablet, and desktop devices.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 7,
+    "question": "What tech stack does EventExplorer use?",
+    "answer": "It uses React, Tailwind CSS, DaisyUI, React Router, Firebase, Swiper, and React Hot Toast, ensuring a modern, fast, and engaging experience.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 8,
+    "question": "Why is React used in EventExplorer?",
+    "answer": "React offers a component-based structure and efficient updates with its virtual DOM, making the app highly interactive and scalable.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 9,
+    "question": "What’s the purpose of the 'Show All' button?",
+    "answer": "The 'Show All' button lets users toggle between viewing just a few events or the full list, making it easier to browse.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 10,
+    "question": "How do toast notifications work here?",
+    "answer": "When you book or remove an event, toast messages give you real-time feedback using the React Hot Toast library.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 11,
+    "question": "Is there a newsletter or update system?",
+    "answer": "There's a newsletter form in the footer where you can subscribe to stay informed about new features and events.",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 12,
+    "question": "Can I explore events by category or tags?",
+    "answer": "Yes, events are categorized, and each card shows a tag so you can easily find events that match your interests.",
+    "date": "2025-05-14"
+  }
+]

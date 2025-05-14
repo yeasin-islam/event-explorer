@@ -36,7 +36,7 @@ const Profile = () => {
   const githubEmail = githubProvider?.email;
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-base-200 rounded-xl shadow-lg text-center">
+    <div className="max-w-md mx-auto p-6 bg-base-200 rounded-xl shadow-lg text-center my-5">
       <h1 className="text-2xl font-bold mb-4">Profile</h1>
 
       {user && (

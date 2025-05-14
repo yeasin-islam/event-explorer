@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 
 const CounteUp = () => {
   return (
-    <div className="text-center my-20 px-4 md:px-8 lg:px-16">
+    <div className="text-center my-6 px-4 md:px-8 lg:px-16 bg-gray-300 py-14">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
         We Provide Best Events Services
       </h1>
@@ -48,7 +48,7 @@ const CounteUp = () => {
 
         {/* Card 4 */}
         <div className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left">
-          <img src="/teamMember.png" alt="Team Members" className="w-16 md:w-20 rounded-full" />
+          <img src="/teamMember.png" alt="Team Members" className="w-16 md:w-20 md:h-20 h-16 rounded-full" />
           <div>
             <h2 className="text-4xl md:text-5xl font-bold flex items-center">
               <CountUp start={0} end={300} duration={5.75} />+

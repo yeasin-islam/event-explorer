@@ -14,9 +14,9 @@ const Home = () => {
         console.log(text)
         e.preventDefault()
         const searchedEvents = eventsData.filter(
-            event =>
-                event.name.toLowerCase().includes(text) ||
-                event.brand.toLowerCase().includes(text)
+           ( event ) =>
+                event?.name?.toLowerCase().split(' ').includes(text) ||
+                event.category?.toLowerCase().split(' ').includes(text)
         )
         setEvents(searchedEvents)
     }
@@ -27,7 +27,7 @@ const Home = () => {
                     Home | EventExplorer
                 </title>
             </Helmet>
-            <div>
+            <div className=''>
                 <Hero handleSearch={handleSearch} />
                 <EventsContainer events={events} />
                 <CounteUp></CounteUp>
