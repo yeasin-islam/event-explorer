@@ -6,9 +6,13 @@ const EventCard = ({ event, deletable, handleRemove }) => {
   const { id, thumbnail, name, description } = event || {}
   return (
     <div className='card bg-base-300  shadow-sm pt-5 text-center items-center'>
-      <figure className='swiper-zoom-container w-72' data-swiper-zoom="5">
-        <img src={thumbnail} alt='Phone Thumbnail' />
-      </figure>
+      <div className="overflow-hidden rounded-xl w-72 h-48 group">
+        <img
+          src={thumbnail}
+          alt="Event Thumbnail"
+          className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+        />
+      </div>
       <div className='card-body text-left'>
         <h2 className='card-title'>{name}</h2>
         <p>{description}</p>

@@ -13,49 +13,30 @@ const CounteUp = () => {
 
       {/* Counter Container */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-        {/* Card 1 */}
-        <div className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left">
-          <img src="/image.png" alt="Total Events" className="w-16 md:w-20 rounded-full" />
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold flex items-center">
-              <CountUp start={0} end={100} duration={5.75} />+
-            </h2>
-            <p className="text-lg text-gray-500 mt-1">Total Events</p>
+        {/* Reusable Card */}
+        {[
+          { src: "/image.png", label: "Total Events", end: 100 },
+          { src: "/review.png", label: "Total Reviews", end: 467 },
+          { src: "/Happy.png", label: "Happy Customers", end: 1900 },
+          { src: "/teamMember.png", label: "Team Members", end: 300 },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src={item.src}
+              alt={item.label}
+              className="w-16 md:w-20 md:h-20 h-16 rounded-full"
+            />
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold flex items-center">
+                <CountUp start={0} end={item.end} duration={5.75} />+
+              </h2>
+              <p className="text-lg text-gray-500 mt-1">{item.label}</p>
+            </div>
           </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left">
-          <img src="/review.png" alt="Total Reviews" className="w-16 md:w-20 rounded-full" />
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold flex items-center">
-              <CountUp start={0} end={467} duration={5.75} />+
-            </h2>
-            <p className="text-lg text-gray-500 mt-1">Total Reviews</p>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left">
-          <img src="/Happy.png" alt="Happy Customers" className="w-16 md:w-20 rounded-full" />
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold flex items-center">
-              <CountUp start={0} end={1900} duration={5.75} />+
-            </h2>
-            <p className="text-lg text-gray-500 mt-1">Happy Customers</p>
-          </div>
-        </div>
-
-        {/* Card 4 */}
-        <div className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left">
-          <img src="/teamMember.png" alt="Team Members" className="w-16 md:w-20 md:h-20 h-16 rounded-full" />
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold flex items-center">
-              <CountUp start={0} end={300} duration={5.75} />+
-            </h2>
-            <p className="text-lg text-gray-500 mt-1">Team Members</p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
