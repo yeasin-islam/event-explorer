@@ -5,6 +5,7 @@ import { useLoaderData } from 'react-router'
 import Hero from './Hero'
 import { Helmet } from 'react-helmet-async'
 import CounteUp from '../components/CounteUp'
+import PeopleSaySection from '../components/Peoplesay'
 
 const Home = () => {
     const eventsData = useLoaderData()
@@ -30,6 +31,7 @@ const Home = () => {
                 <Hero handleSearch={handleSearch} />
                 <EventsContainer events={events} />
                 <CounteUp></CounteUp>
+                <PeopleSaySection></PeopleSaySection>
             </div>
         </>
     )

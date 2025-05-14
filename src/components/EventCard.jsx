@@ -5,8 +5,8 @@ import { MdDeleteForever } from 'react-icons/md'
 const EventCard = ({ event, deletable, handleRemove }) => {
   const { id, thumbnail, name, description } = event || {}
   return (
-    <div className='card bg-base-100  shadow-sm pt-5 container mx-auto'>
-      <figure>
+    <div className='card bg-base-300  shadow-sm pt-5 text-center items-center'>
+      <figure className='swiper-zoom-container w-72' data-swiper-zoom="5">
         <img src={thumbnail} alt='Phone Thumbnail' />
       </figure>
       <div className='card-body text-left'>

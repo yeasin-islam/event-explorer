@@ -3,66 +3,57 @@ import CountUp from "react-countup";
 
 const CounteUp = () => {
   return (
-    <div className="fontStyle text-center my-20 container mx-auto">
-      <h1 className="text-5xl font-bold">We Provide Best Events Services</h1>
-      <p className="text-xl font-normal p-8">
-        Our platform connects you with verified, experienced doctors across
-        various specialties — all at your convenience.
+    <div className="text-center my-20 px-4 md:px-8 lg:px-16">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
+        We Provide Best Events Services
+      </h1>
+      <p className="text-base md:text-lg text-gray-600 mt-4 mb-12 max-w-2xl mx-auto">
+        From small meetups to large-scale festivals — EventExplorer powers every moment.
       </p>
-      {/* Counter Container  */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div className="1st card border-none bg-slate-200 rounded-md p-8 pr-16 text-left space-y-8">
-          <div className="w-40">
-            <img src="success-doctor.png" alt="Success-doctors" />
-          </div>
-          <div className=" space-y-3 pr-3">
-            <div className="text-5xl font-bold flex justify-start items-center">
-              <CountUp start={0} end={100} duration={5.75}>
-                {" "}
-              </CountUp>
-              <p>+</p>
-            </div>
 
-            <p className="text-2xl font-medium text-slate-500">Total Dictors</p>
+      {/* Counter Container */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        {/* Card 1 */}
+        <div className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left">
+          <img src="/image.png" alt="Total Events" className="w-16 md:w-20 rounded-full" />
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold flex items-center">
+              <CountUp start={0} end={100} duration={5.75} />+
+            </h2>
+            <p className="text-lg text-gray-500 mt-1">Total Events</p>
           </div>
         </div>
-        <div className="2nd card border-none bg-slate-200 rounded-md p-8 pr-16 text-left space-y-8">
-          <div className="w-40">
-            <img src="success-review.png" alt="Success-reviews" />
-          </div>
-          <div className=" space-y-3 pr-3">
-            <div className="text-5xl font-bold flex justify-start items-center">
-              <CountUp start={0} end={467} duration={5.75}></CountUp>
-              <p>+</p>
-            </div>
 
-            <p className="text-2xl font-medium text-slate-500">Total Reviews</p>
+        {/* Card 2 */}
+        <div className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left">
+          <img src="/review.png" alt="Total Reviews" className="w-16 md:w-20 rounded-full" />
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold flex items-center">
+              <CountUp start={0} end={467} duration={5.75} />+
+            </h2>
+            <p className="text-lg text-gray-500 mt-1">Total Reviews</p>
           </div>
         </div>
-        <div className="3rd card border-none bg-slate-200 rounded-md p-8 pr-16 text-left space-y-8">
-          <div className="w-40">
-            <img src="success-patients.png" alt="Success-patients" />
-          </div>
-          <div className=" space-y-3 pr-3">
-            <div className="text-5xl font-bold flex justify-start items-center">
-              <CountUp start={0} end={1900} duration={5.75}></CountUp>
-              <p>+</p>
-            </div>
-            <p className="text-2xl font-medium text-slate-500">
-              Total Patients
-            </p>
+
+        {/* Card 3 */}
+        <div className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left">
+          <img src="/Happy.png" alt="Happy Customers" className="w-16 md:w-20 rounded-full" />
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold flex items-center">
+              <CountUp start={0} end={1900} duration={5.75} />+
+            </h2>
+            <p className="text-lg text-gray-500 mt-1">Happy Customers</p>
           </div>
         </div>
-        <div className="4th card border-none bg-slate-200 rounded-md p-8 pr-16 text-left space-y-8">
-          <div className="w-40">
-            <img src="success-staffs.png" alt="Success-staffs" />
-          </div>
-          <div className="space-y-3 pr-3">
-            <div className="text-5xl font-bold flex justify-start items-center">
-              <CountUp start={0} end={300} duration={5.75}></CountUp>
-              <p>+</p>
-            </div>
-            <p className="text-2xl font-medium text-slate-500">Total Stuffs</p>
+
+        {/* Card 4 */}
+        <div className="card bg-base-100 shadow-md rounded-xl p-6 flex flex-col items-start space-y-6 text-left">
+          <img src="/teamMember.png" alt="Team Members" className="w-16 md:w-20 rounded-full" />
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold flex items-center">
+              <CountUp start={0} end={300} duration={5.75} />+
+            </h2>
+            <p className="text-lg text-gray-500 mt-1">Team Members</p>
           </div>
         </div>
       </div>

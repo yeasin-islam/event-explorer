@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Total Events",
+    "count": 100,
+    "image": "/image.png"
+  },
+  {
+    "label": "Total Reviews",
+    "count": 467,
+    "image": "/review.png"
+  },
+  {
+    "label": "Happy Customers",
+    "count": 1900,
+    "image": "/Happy.png"
+  },
+  {
+    "label": "Team Members",
+    "count": 300,
+    "image": "/teamMember.png"
+  }
+]

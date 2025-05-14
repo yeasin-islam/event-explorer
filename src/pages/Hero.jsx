@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 // import Button from '../shared/Button'
 import bannerImg from '/public/image.png'
 import Button from '../components/shared/Button'
+import Slider from '../components/slider/Slider'
 const Hero = ({ handleSearch }) => {
     const [searchText, setSearchText] = useState('')
     return (
@@ -9,11 +10,12 @@ const Hero = ({ handleSearch }) => {
             <div className='py-12 container mx-auto md:flex justify-between max-h-full items-center'>
                 <div className='text-center space-y-4 md:w-2/4 md:text-left'>
                     <h1 className='text-4xl md:text-7xl font-bold text-gray-900'>
-                        Browse, Search, View, Buy
+                        Find Events That Move You
                     </h1>
                     <p className=' text-gray-100'>
-                        Best place to browse, search, view details and purchase of top
-                        flagship phones <br /> of the current time - FlagshipFaceOff
+                        From local meetups to major festivals, EventExplorer helps you discover, explore, and attend events that match your vibe. Dive into categories, save your favorites, and never miss out on what’s happening around you.
+
+
                     </p>
                     <form
                         onSubmit={e => {
@@ -32,11 +34,7 @@ const Hero = ({ handleSearch }) => {
                         <Button type='submit' label='Search' />
                     </form>
                 </div>
-                <img
-                    src={bannerImg}
-                    className='container mx-auto w-full h-96 md:w-auto md:max-w-md '
-                    alt=''
-                />
+                <Slider></Slider>
             </div>
         </div>
     )

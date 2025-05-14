@@ -10,7 +10,7 @@ const EmptyState = () => {
         Browse, Search Events. Book Events Now, My Booked Events.
       </p>
       <Link to='/'>
-        <Button label='Back' />
+        <Button label='Back To Homepage' />
       </Link>
     </div>
   )
