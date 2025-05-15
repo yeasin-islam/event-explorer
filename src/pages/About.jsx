@@ -28,7 +28,7 @@ const Blogs = () => {
     }, [showAll, faqs]);
 
     return (
-        <>
+        <section className='bg-base-200'>
             <Helmet>
                 <title>
                     About | EventeXplorer
@@ -36,6 +36,14 @@ const Blogs = () => {
             </Helmet>
             <Suspense fallback={<LoadingFallback />}>
                 <div className="fontStyle fontStyle px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 py-5">
+                    <div className="text-center mb-14 mt-5">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-2">
+                            Frequently Asked Questions
+                        </h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+                            Got questions? We've got answers. Here are some of the most common things people ask about EventeXplorer.
+                        </p>
+                    </div>
                     <div className="space-y-4 mb-8">
                         {displayQuestions.map((faq) => (
                             <div
@@ -69,7 +77,7 @@ const Blogs = () => {
                     </div>
                 </div>
             </Suspense>
-        </>
+        </section>
     );
 };
 

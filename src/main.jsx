@@ -11,7 +11,6 @@ import { Toaster } from 'react-hot-toast'
 
 createRoot(document.getElementById('root')).render(
   <HelmetProvider>
-
     <StrictMode>
       <CartProvider>
         <AuthProvider>
@@ -20,7 +19,5 @@ createRoot(document.getElementById('root')).render(
         </AuthProvider>
       </CartProvider>
     </StrictMode>
-
-
   </HelmetProvider>
 )

@@ -36,84 +36,86 @@ const Profile = () => {
   const githubEmail = githubProvider?.email;
 
   return (
-    <div className="fontStyle max-w-md mx-auto p-6 bg-base-200 rounded-xl shadow-lg text-center my-5">
+    <section className='bg-base-200 py-20'>
+      <div className="fontStyle max-w-md mx-auto p-6 bg-white rounded-xl shadow-lg text-center">
 
-      <Helmet>
-        <title>Profile | EventeXplorer</title>
-      </Helmet>
-      <h1 className="text-2xl font-bold mb-4">Profile</h1>
+        <Helmet>
+          <title>Profile | EventeXplorer</title>
+        </Helmet>
+        <h1 className="text-2xl font-bold mb-4">Profile</h1>
 
-      {user && (
-        <div className="space-y-2">
-          {/* Display profile image or fallback image */}
-          <div className="h-20 w-20 rounded-full mx-auto bg-gray-300 flex items-center justify-center">
-            {user.photoURL ? (
-              <img
-                className="h-20 w-20 rounded-full"
-                src={user.photoURL}
-                alt="Profile"
-              />
-            ) : (
-              <FaUserCircle className="text-6xl text-gray-600" />
+        {user && (
+          <div className="space-y-2">
+            {/* Display profile image or fallback image */}
+            <div className="h-20 w-20 rounded-full mx-auto bg-gray-300 flex items-center justify-center">
+              {user.photoURL ? (
+                <img
+                  className="h-20 w-20 rounded-full"
+                  src={user.photoURL}
+                  alt="Profile"
+                />
+              ) : (
+                <FaUserCircle className="text-6xl text-gray-600" />
+              )}
+            </div>
+
+            <div className="text-lg font-semibold">{user.displayName || "No Name Set"}</div>
+            <div className="text-sm opacity-70">
+              {user.email || githubEmail || "Email not available"}
+            </div>
+
+            {githubURL && (
+              <div>
+                <a
+                  href={githubURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link link-primary"
+                >
+                  GitHub Profile
+                </a>
+              </div>
             )}
           </div>
+        )}
 
-          <div className="text-lg font-semibold">{user.displayName || "No Name Set"}</div>
-          <div className="text-sm opacity-70">
-            {user.email || githubEmail || "Email not available"}
-          </div>
-
-          {githubURL && (
-            <div>
-              <a
-                href={githubURL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link link-primary"
-              >
-                GitHub Profile
-              </a>
-            </div>
-          )}
-        </div>
-      )}
-
-      <div className="mt-6">
-        <button onClick={() => setShow(!show)} className="btn btn-success">
-          {show ? "Cancel" : "Edit Profile"}
-        </button>
-      </div>
-
-      {show && (
-        <form onSubmit={handleProfileUpdate} className="mt-6 space-y-4 text-left">
-          <fieldset className="fieldset">
-            <label className="label">Name</label>
-            <input
-              defaultValue={user?.displayName}
-              type="text"
-              name="displayName"
-              className="input w-full"
-              placeholder="Name"
-              required
-            />
-
-            <label className="label">Photo URL</label>
-            <input
-              defaultValue={user?.photoURL}
-              type="text"
-              name="photoURL"
-              className="input w-full"
-              placeholder="Photo URL"
-              required
-            />
-          </fieldset>
-
-          <button type="submit" className="btn btn-neutral w-full">
-            Update Profile
+        <div className="mt-6">
+          <button onClick={() => setShow(!show)} className="btn btn-success">
+            {show ? "Cancel" : "Edit Profile"}
           </button>
-        </form>
-      )}
-    </div>
+        </div>
+
+        {show && (
+          <form onSubmit={handleProfileUpdate} className="mt-6 space-y-4 text-left">
+            <fieldset className="fieldset">
+              <label className="label">Name</label>
+              <input
+                defaultValue={user?.displayName}
+                type="text"
+                name="displayName"
+                className="input w-full"
+                placeholder="Name"
+                required
+              />
+
+              <label className="label">Photo URL</label>
+              <input
+                defaultValue={user?.photoURL}
+                type="text"
+                name="photoURL"
+                className="input w-full"
+                placeholder="Photo URL"
+                required
+              />
+            </fieldset>
+
+            <button type="submit" className="btn btn-neutral w-full">
+              Update Profile
+            </button>
+          </form>
+        )}
+      </div>
+    </section>
   );
 };
 

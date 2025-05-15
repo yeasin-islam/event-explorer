@@ -30,7 +30,7 @@ const EventCard = ({ event, deletable, handleRemove }) => {
           </p>
         </div>
         <h2 className='card-title'>{name}</h2>
-        <p>{description}</p>
+        <p className='text-gray-500'>{description}</p>
         <p className='font-medium'>Organizer: {organizer}</p>
         <h4>Entry Fee: <span className='text-[#09982F] font-semibold'> {entry_fee}</span></h4>
         <p className='font-medium'>Location: {location}</p>

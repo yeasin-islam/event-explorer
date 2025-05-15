@@ -9,13 +9,13 @@ const ErrorPage = () => {
 
   return (
     <>
-      <div className='fontStyle py-24 text-center'>
+      <div className='fontStyle py-24 text-center bg-base-200</>'>
         <Helmet>
         <title>
           Error Page | EventeXplorer
         </title>
       </Helmet>
-        <h1 className='mb-8 text-7xl font-thin text-gray-900'>
+        <h1 className='my-10 text-7xl font-thin text-gray-900'>
           {error?.status || 404}
         </h1>
         <p className='mb-3 text-xl font-bold text-gray-900 md:text-2xl'>

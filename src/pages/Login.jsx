@@ -56,10 +56,8 @@ const Login = () => {
         </title>
       </Helmet>
       <div className="w-full max-w-sm">
-        <div className="text-center mb-5">
-          <h1 className="text-2xl font-bold">Login</h1>
-        </div>
         <div className="card bg-base-100 shadow-2xl">
+          <h1 className="text-2xl font-bold text-center mt-5">Login</h1>
           <div className="card-body">
             <form onSubmit={handleSubmit}>
               <label className="label">Email</label>

@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "question": "What is EventExplorer and what does it offer?",
-    "answer": "EventExplorer is a modern web app that helps users discover, explore, and book exciting events. It features an intuitive interface, real-time feedback with toasts, and seamless booking—all built with React, Tailwind CSS, Firebase, and more.",
+    "question": "What is EventeXplorer and what does it offer?",
+    "answer": "EventeXplorer is a modern web app that helps users discover, explore, and book exciting events. It features an intuitive interface, real-time feedback with toasts, and seamless booking—all built with React, Tailwind CSS, Firebase, and more.",
     "date": "2025-05-14"
   },
   {
     "id": 2,
-    "question": "How can I book an event on EventExplorer?",
+    "question": "How can I book an event on EventeXplorer?",
     "answer": "Go to the event details page, fill in your name and email, then click the 'Book Event' button. Your event will be saved and viewable in the Booked Events section.",
     "date": "2025-05-14"
   },
@@ -31,19 +31,19 @@
   },
   {
     "id": 6,
-    "question": "Is EventExplorer mobile-friendly?",
-    "answer": "Absolutely. EventExplorer is fully responsive and works seamlessly on mobile, tablet, and desktop devices.",
+    "question": "Is EventeXplorer mobile-friendly?",
+    "answer": "Absolutely. EventeXplorer is fully responsive and works seamlessly on mobile, tablet, and desktop devices.",
     "date": "2025-05-14"
   },
   {
     "id": 7,
-    "question": "What tech stack does EventExplorer use?",
+    "question": "What tech stack does EventeXplorer use?",
     "answer": "It uses React, Tailwind CSS, DaisyUI, React Router, Firebase, Swiper, and React Hot Toast, ensuring a modern, fast, and engaging experience.",
     "date": "2025-05-14"
   },
   {
     "id": 8,
-    "question": "Why is React used in EventExplorer?",
+    "question": "Why is React used in EventeXplorer?",
     "answer": "React offers a component-based structure and efficient updates with its virtual DOM, making the app highly interactive and scalable.",
     "date": "2025-05-14"
   },
