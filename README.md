@@ -59,15 +59,14 @@ npm install react-icons
 
 
 
-## 📸 Preview
+# 📸 Preview
 
-Here’s a quick look at EventeXplorer in action:
 
-![EventeXplorer Homepage](./public/screenshots/homepage.png)
-*Home Page with featured events and navigation*
 
-![Event Details Page](./public/screenshots/event-details.png)
-*Detailed event view for easy booking*
 
-![User Profile Page](./public/screenshots/profile.png)
-*User profile showing booked events*
+
+
+![ScreenShot](/screenshots/event-details.png)
+
+
+![UserProfilePage](screenshots/profile.png)
