@@ -20,7 +20,7 @@ const PeopleSaySection = () => {
           {testimonials.map((t, index) => (
             <div
               key={index}
-              className="card bg-white shadow-xl p-6 rounded-2xl transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+              className="card bg-white shadow-xl p-6 rounded-2xl transform transition duration-300 hover:scale-105 hover:shadow-xl"
             >
               <div className="avatar mb-4 mx-auto">
                 <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">

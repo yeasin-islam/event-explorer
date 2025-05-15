@@ -1,13 +1,6 @@
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-cards';
-
-import './styles.css';
-// import bannerImg from '/public/image.png'
 import event1 from '/public/event1.jpeg';
 import event2 from '/public/event2.jpeg';
 import event3 from '/public/event3.jpeg';
@@ -18,34 +11,41 @@ import event7 from '/public/event7.jpeg';
 import event8 from '/public/event8.jpeg';
 import event9 from '/public/event9.jpeg';
 
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import './styles.css';
+
 // import required modules
-import { EffectCards } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
+export default function App() {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  };
 
-const Slider = () => {
   return (
     <>
       <Swiper
-        effect={'cards'}
-        grabCursor={true}
-        modules={[EffectCards]}
+        pagination={pagination}
+        modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img className='h-full' src={event1} alt="" />
-        </SwiperSlide>
-        <SwiperSlide><img className='h-full w-full' src={event2} alt="" />
-        </SwiperSlide>
-        <SwiperSlide><img className='h-full w-full' src={event3} alt="" /></SwiperSlide>
-        <SwiperSlide><img className='h-full w-full' src={event4} alt="" /></SwiperSlide>
-        <SwiperSlide><img className='h-full w-full' src={event5} alt="" /></SwiperSlide>
-        <SwiperSlide><img className='h-full w-full' src={event6} alt="" /></SwiperSlide>
-        <SwiperSlide><img className='h-full w-full' src={event7} alt="" /></SwiperSlide>
-        <SwiperSlide><img className='h-full w-full' src={event8} alt="" /></SwiperSlide>
-        <SwiperSlide><img className='h-full w-full' src={event9} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='h-full' src={event1} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='h-full' src={event2} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='h-full' src={event3} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='h-full' src={event4} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='h-full' src={event5} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='h-full' src={event6} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='h-full' src={event7} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='h-full' src={event8} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='h-full' src={event9} alt="" /></SwiperSlide>
       </Swiper>
     </>
   );
-};
-
-export default Slider;
+}
