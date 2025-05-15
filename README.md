@@ -7,9 +7,13 @@ Welcome to **EventeXplorer** – a fun and modern web app that helps people disc
 👉 [Visit EventeXplorer-Netlify](https://event-explorer-catagori-jesmine-a9.netlify.app)
 👉 [Visit EventeXplorer-Surge](http://event-explorer-catagori-jesmine-a9.surge.sh)
 
+---
+
+
 ## 🎯 Purpose
 
 EventeXplorer is built to make it easy for users to:
+
 - Browse and search for different events
 - See full details about an event (date, place, price, etc.)
 - Book events they’re interested in
@@ -18,6 +22,8 @@ EventeXplorer is built to make it easy for users to:
 - Find answers in the FAQs
 
 Whether you're looking for concerts, workshops, or tech meetups — EventeXplorer brings the experience to your fingertips.
+
+---
 
 ## 🚀 Key Features
 
@@ -31,17 +37,19 @@ Whether you're looking for concerts, workshops, or tech meetups — EventeXplore
 - 🎠 **Smooth Image Sliders**: Swiper for beautiful visuals
 - 🍞 **Toast Alerts**: Clean and simple notifications
 
+---
+
 ## 🔧 Tools & Technologies Used
 
-| Area           | Tech Used                               |
-|----------------|------------------------------------------|
-| Core           | React 19, Vite                          |
-| Routing        | React Router                            |
-| Styling        | Tailwind CSS, DaisyUI                   |
-| Authentication | Firebase                                 |
-| UI Enhancements| React Hot Toast, React CountUp, Swiper   |
-| Metadata       | React Helmet Async                      |
-| Icons          | React Icons                             |
+| Area            | Tech Used                              |
+| --------------- | -------------------------------------- |
+| Core            | React 19, Vite                         |
+| Routing         | React Router                           |
+| Styling         | Tailwind CSS, DaisyUI                  |
+| Authentication  | Firebase                               |
+| UI Enhancements | React Hot Toast, React CountUp, Swiper |
+| Metadata        | React Helmet Async                     |
+| Icons           | React Icons                            |
 
 ---
 
@@ -56,17 +64,27 @@ npm install react-countup
 npm install swiper
 npm install react-helmet-async
 npm install react-icons
+```
+
+---
 
 
+## 📸 Preview
 
-# 📸 Preview
+Here’s a quick look at EventeXplorer in action:
 
+![EventeXplorer Homepage](./public/screenshots/homepage.png)
+**Home Page with featured events and navigation**
 
+---
 
+![Event Details Page](./public/screenshots/event-details.png)
+**Detailed event view for easy booking**
 
+---
 
+![User Profile Page](./public/screenshots/profile.png)
+**User profile showing booked events**
 
-![ScreenShot](/screenshots/event-details.png)
+---
 
-
-![UserProfilePage](screenshots/profile.png)
