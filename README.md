@@ -69,6 +69,64 @@ npm install react-icons
 ---
 
 
+## 💻 How to Run Locally
+
+### 1. Clone the repository
+
+```
+bash
+
+https://github.com/yeasin-islam/event-explorer.git
+
+```
+### 2. Install dependencies
+
+```
+bash
+
+npm install
+
+```
+
+### 3. Setup Firebase
+
+- Create a Firebase project in Firebase Console
+- Enable Authentication (Email/Password & Google)
+- Setup Firestore and Storage
+- Add your Firebase config in src/firebase/firebaseConfig.js
+
+### 4. Run the development server
+
+```
+base
+
+npm run dev
+
+```
+
+### ☁ Deployment
+
+- Firebase Hosting (Primary)
+
+- Surge.sh (Alternative)
+
+### 📦 Dependencies (from package.json)
+
+```
+react
+react-router-dom
+vite
+firebase
+tailwindcss
+daisyui
+lottie-react
+React CountUp
+react-hot-toast
+swiper
+```
+
+---
+
 ## 📸 Preview
 
 Here’s a quick look at EventeXplorer in action:
@@ -87,4 +145,9 @@ Here’s a quick look at EventeXplorer in action:
 **User profile showing booked events**
 
 ---
+
+## 👨‍💻 Developer
+
+### Md. Yeasin Islam
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/yeasin-islam75)
 
