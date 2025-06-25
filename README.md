@@ -106,7 +106,7 @@ npm run dev
 
 ### ☁ Deployment
 
-- Firebase Hosting (Primary)
+- Netlify Hosting (Primary)
 
 - Surge.sh (Alternative)
 
